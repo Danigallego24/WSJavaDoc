@@ -47,6 +47,14 @@ public class Jugador {
 	 * @param dorsal Representa el dorsal que queremos designar
 	 */
 
+	/**
+	 * Metodo que hace que el jugador se ponga un dorsal pasado por parametro. Si el número 
+	 * del dorsal está entre 1 y 30, se pone el dorsal, de lo contrario el valor del dorsal será 
+	 * -1
+	 * 
+	 * @param dorsal
+	 */
+
 	public void ponerDorsal(int dorsal) {
 		if (dorsal >= 1 && dorsal <= 30) {
 			this.dorsal = dorsal;
@@ -69,6 +77,13 @@ public class Jugador {
  * @return devuelve si el juegador esta expulsado o no, dependiendo a las tarjetas que tiene
  */
 
+	/**
+	 * Metodo que devuelve si un jugador ha sido expulsado. Si el jugador tiene 2 tarjetas amarillas
+	 * o una tarjeta, está expulsado, de lo contrario, no será expulsado.
+	 * 
+	 * @return "True" si ha sido expulsado, "False" si no ha sido expulsado
+	 */
+	
 	public boolean estaExpulsado() {
 		boolean expulsado = false;
 		if (numeroTarjetasAmarillas == 2) {

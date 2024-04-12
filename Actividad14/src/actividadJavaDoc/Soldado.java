@@ -36,12 +36,38 @@ public class Soldado {
 	//Crea una variable llamada puedeDisparar, la cual
 	//te dice que si el numero de balas es mayor que 
 	// 0 puede disparar, en cambio si tiene menos no
+	
+	/**
+	 * Metodo que hace la funcion de disparar
+	 * Verifica el numero de balas y lo disminuye y a continuacion 
+	 * el soldado esta muerto
+	 * @param sol Representa el otro soldado dado de alta
+	 */
 
+	/**
+	 * Método que hace disparar al soldado contra otro soldado introducido por parametro. Al 
+	 * disparar pierde una bala del atributo "numeroBalas" y el atributo "estaMuerto" del soldado introducido 
+	 * parametro es "True".
+	 * 
+	 * @param sol Soldado que es disparado 
+	 */
+	public void disparar(Soldado sol) {
+
+		this.numeroBalas--;
+
+		sol.estaMuerto = true;
+
+	}
 	/**
 	 * Metodo que verifica si puede disparar
 	 * Puede disparar si el "numeroBlas" es mayor a 0, si es asi, devuelve true
 	 * caso contrario devuelve false
  	 * @return devuelve true o false, dependiendo si tiene balas o no
+	/**
+	 * Método que devuelve si un soldado puedo disparar. El soldado puede disparar si su 
+	 * número de balas es mayor a 0, de caso contrario no podrá disparar.
+	 * 
+	 * @return "True" si puede disparar, "False" si no puede disparar
 	 */
 	public boolean puedeDisparar() {
 
@@ -51,22 +77,5 @@ public class Soldado {
 		return false;
 	}
 	
-
-	//Crea la variable disparar al soldado sol, lo que
-	//hace es ir reduciendo el número de balas y saber 
-	// si sol esta muerto
-	
-
-	/**
-	 * Metodo que hace la funcion de disparar
-	 * Verifica el numero de balas y lo disminuye y a continuacion 
-	 * el soldado esta muerto
-	 * @param sol Representa el otro soldado dado de alta
-	 */
-
-	public void disparar(Soldado sol) {
-		this.numeroBalas--;
-		sol.estaMuerto = true;
-	}
 
 }
