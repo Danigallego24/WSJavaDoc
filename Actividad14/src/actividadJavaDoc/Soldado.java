@@ -7,13 +7,25 @@ package actividadJavaDoc;
  */
 public class Soldado {
 	
+
+	/**
+	 * Atributo booleano que determina si el soldado esta muerto o no.
+	 */
 	private boolean estaMuerto;
+	
+	/**
+	 * Atributo de valor entero que determina el numero de balas
+	 */
+
+	
+
 	private int numeroBalas;
 
 	// Crear los métodos “get” y “set” de los atributos cuando se vayan a hacer las
 	// pruebas y la documentación. Aquí no se han creado porque no aportan nada
 
-	
+
+
 	public boolean isEstaMuerto() {
 		return estaMuerto;
 	}
@@ -37,16 +49,10 @@ public class Soldado {
 		// 0 puede disparar, en cambio si tiene menos no
 	
 
+
 	//Crea una variable llamada puedeDisparar, la cual
 	//te dice que si el numero de balas es mayor que 
 	// 0 puede disparar, en cambio si tiene menos no
-	
-	/**
-	 * Metodo que hace la funcion de disparar
-	 * Verifica el numero de balas y lo disminuye y a continuacion 
-	 * el soldado esta muerto
-	 * @param sol Representa el otro soldado dado de alta
-	 */
 
 	/**
 	 * Método que hace disparar al soldado contra otro soldado introducido por parametro. Al 
@@ -62,11 +68,7 @@ public class Soldado {
 		sol.estaMuerto = true;
 
 	}
-	/**
-	 * Metodo que verifica si puede disparar
-	 * Puede disparar si el "numeroBlas" es mayor a 0, si es asi, devuelve true
-	 * caso contrario devuelve false
- 	 * @return devuelve true o false, dependiendo si tiene balas o no
+
 	/**
 	 * Método que devuelve si un soldado puedo disparar. El soldado puede disparar si su 
 	 * número de balas es mayor a 0, de caso contrario no podrá disparar.
@@ -88,4 +90,5 @@ public class Soldado {
 		//que si tiene 2 amarrillas está expulsado o si tiene una 
 		//cartulina roja. Si no, el jugador no estaría expulsado
 
-}
+
+	}
