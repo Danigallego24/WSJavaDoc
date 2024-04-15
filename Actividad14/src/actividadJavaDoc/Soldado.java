@@ -1,7 +1,13 @@
 package actividadJavaDoc;
 
+/**
+ *Clase que representa dos atributos estaMuerto y numeroBalas
+ *@author Felix
+ *@version 1.0
+ */
 public class Soldado {
 	
+
 	/**
 	 * Atributo booleano que determina si el soldado esta muerto o no.
 	 */
@@ -10,19 +16,26 @@ public class Soldado {
 	/**
 	 * Atributo de valor entero que determina el numero de balas
 	 */
+
+	
+
 	private int numeroBalas;
 
 	// Crear los métodos “get” y “set” de los atributos cuando se vayan a hacer las
 	// pruebas y la documentación. Aquí no se han creado porque no aportan nada
 
+
+
 	public boolean isEstaMuerto() {
 		return estaMuerto;
 	}
 
+	
 	public void setEstaMuerto(boolean estaMuerto) {
 		this.estaMuerto = estaMuerto;
 	}
 
+	
 	public int getNumeroBalas() {
 		return numeroBalas;
 	}
@@ -31,12 +44,30 @@ public class Soldado {
 		this.numeroBalas = numeroBalas;
 	}
 	
+	//Crea una variable llamada puedeDisparar, la cual
+	//te dice que si el numero de balas es mayor que 
+	// 0 puede disparar, en cambio si tiene menos no
+
 	/**
-	 * Metodo booleano que establece un condicional que determina si la referencia
-	 * del numero de balas, "this.numeroBalas", es mayor que 0 o no. 
+	 * Método que hace disparar al soldado contra otro soldado introducido por parametro. Al 
+	 * disparar pierde una bala del atributo "numeroBalas" y el atributo "estaMuerto" del soldado introducido 
+	 * parametro es "True".
 	 * 
-	 * @return retornará <b>true</b> si y solo si la referencia "this.numeroBalas" 
-	 * es mayor que 0, si la referencia es menor o igual que 0 retornará <b>false</b>.
+	 * @param sol Soldado que es disparado 
+	 */
+	public void disparar(Soldado sol) {
+
+		this.numeroBalas--;
+
+		sol.estaMuerto = true;
+
+	}
+
+	/**
+	 * Método que devuelve si un soldado puedo disparar. El soldado puede disparar si su 
+	 * número de balas es mayor a 0, de caso contrario no podrá disparar.
+	 * 
+	 * @return "True" si puede disparar, "False" si no puede disparar
 	 */
 	public boolean puedeDisparar() {
 
@@ -44,19 +75,7 @@ public class Soldado {
 			return true;
 		}
 		return false;
-	}
-	
-	/**
-	 * Metodo con un objeto "sol" pasado por parametro que determina que cada vez que
-	 * se ejecute este metodo, el valor de la referencia "this.numeroBalas" se le 
-	 * restará uno para luego establecer que el objeto pasado por parametro apuntando
-	 * al atributo "estaMuerto" le establezca el valor <b>true</b>.
-	 * 
-	 * @param sol objeto pasado por parametro de la clase "Soldado".
-	 */
-	public void disparar(Soldado sol) {
-		this.numeroBalas--;
-		sol.estaMuerto = true;
+
 	}
 
 }
