@@ -32,6 +32,10 @@ public class Soldado {
 		this.numeroBalas = numeroBalas;
 	}
 	
+	//Crea una variable llamada puedeDisparar, la cual
+		//te dice que si el numero de balas es mayor que 
+		// 0 puede disparar, en cambio si tiene menos no
+	
 
 	//Crea una variable llamada puedeDisparar, la cual
 	//te dice que si el numero de balas es mayor que 
@@ -76,6 +80,12 @@ public class Soldado {
 		}
 		return false;
 	}
+	//Crea la variable disparar al soldado sol, lo que
+		//hace es ir reduciendo el número de balas y saber 
+		// si sol esta muerto
 	
+	//El crea una variable llamada estaExpulsado la cual te dice
+		//que si tiene 2 amarrillas está expulsado o si tiene una 
+		//cartulina roja. Si no, el jugador no estaría expulsado
 
 }
